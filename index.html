@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Products</title>
+  <meta name="google-adsense-account" content="ca-pub-2572280001571871">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2572280001571871"
+    crossorigin="anonymous"></script>
+
+  <style>
+    /* Basic reset and body styling */
+    body {
+      margin: 0;
+      background-color: #f0f2f5; /* A lighter background for better readability */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      padding: 1rem; /* Add some padding for small screens */
+      box-sizing: border-box;
+    }
+
+    /* --- Main Container --- */
+    .phone-frame {
+      width: 100%; /* Take up the full width of its parent */
+      max-width: 420px; /* But don't get wider than a typical phone width on desktop */
+      min-height: 815px;
+      border: 8px solid #131212;
+      border-radius: 10px;
+      background: #131212;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      padding: 1rem; /* Add internal padding */
+      box-sizing: border-box;
+    }
+
+    /* --- Header & Logos --- */
+    .head {
+      font-family: monospace;
+      font-size: 1.5rem; /* Use rem for scalable fonts */
+      text-align: center;
+      color: rgb(170, 117, 255);
+      margin: 0.5rem 0;
+    }
+
+    .topbox {
+      display: flex; /* Use Flexbox to align logos */
+      justify-content: space-around; /* Distribute logos evenly */
+      align-items: center;
+      padding: 1rem;
+      background-color: #131212;
+      margin-bottom: 1.5rem;
+    }
+
+    .topbox img {
+      height: 40px; /* Give them a consistent height */
+      width: auto;  /* Let width adjust automatically */
+      object-fit: contain; /* Ensure logos don't get distorted */
+    }
+
+    /* --- Product Card Layout --- */
+    .product {
+      display: flex; /* THIS IS THE KEY: Use Flexbox for layout */
+      align-items: center; /* Vertically center items in the card */
+      gap: 1rem; /* Add space between the image and the info */
+      margin-bottom: 1.5rem;
+      padding: 0.75rem;
+      background-color: #212121;
+      border-radius: 20px; /* Simplified border-radius */
+    }
+
+    .product-img {
+      width: 100px; /* Fixed width for the image */
+      height: 100px; /* Fixed height */
+      border-radius: 15px;
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+      flex-shrink: 0; /* Prevents the image from shrinking */
+    }
+    
+    .product-info {
+      display: flex;
+      flex-direction: column; /* Stack text and button vertically */
+      justify-content: center;
+      gap: 0.75rem; /* Space between text and button */
+      overflow: hidden; /* Prevents long text from overflowing */
+    }
+
+    .product-title {
+      color: #e4e4e4;
+      font-weight: bold;
+      font-size: 0.9rem;
+      /* The following properties handle long text gracefully */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .btn {
+      background-color: #f39c12;
+      color: #131212;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      border-radius: 9px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none; /* For the 'a' tag button */
+      display: inline-block; /* For proper padding on 'a' tag */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+      width: fit-content; /* Button is only as wide as its content */
+    }
+
+    .btn:hover {
+      background-color: #ff7b00;
+    }
+
+    /* --- Footer --- */
+    .end {
+      color: rgb(255, 0, 234);
+      font-size: 0.75rem; /* Use rem */
+      text-align: center;
+      line-height: 1.5;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="phone-frame">
+    <h1 class="head">Top products</h1>
+    <h1 class="head">From</h1>
+
+    <div class="topbox">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Meesho_logo.png/600px-Meesho_logo.png" alt="Meesho Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="Amazon Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flipkart_logo.svg/2560px-Flipkart_logo.svg.png" alt="Flipkart Logo">
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61rvkHxRmrL._SX425_.jpg" class="product-img">
+      <div class="product-info">
+        <span class="product-title">This is a long product title that will be truncated</span>
+        <a href="#link1"><button class="btn">Click Here</button></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71edbsEtAAL._SX425_.jpg" class="product-img">
+      <div class="product-info">
+        <span class="product-title">Another Product (test)</span>
+        <a href="#link2"><button class="btn">Click Here</button></a>
+      </div>
+    </div>
+    
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61rvkHxRmrL._SX425_.jpg" class="product-img">
+      <div class="product-info">
+        <span class="product-title">Test Test Test Item</span>
+        <a href="https://amzn.in/d/0i6urBg" target="_blank" rel="noopener noreferrer"><button class="btn">Click Here</button></a>
+      </div>
+    </div>
+    
+    <p class="end">
+      This site is made with my limitations...This is not a perfect site. For feedback and suggestion [@gmail.com] Thank you....
+    </p>
+
+  </div>
+</body>
+</html>
