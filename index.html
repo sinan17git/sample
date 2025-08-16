@@ -7,75 +7,87 @@
   <style>
     body {  
       margin: 0;
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background-color: #f8f8f8;
       font-family: Arial, sans-serif;
     }
 
-    .phone-frame {
-      width: 95%;
-      max-width: 420px;
-      height: 90vh;
-      border: 5px solid #131212;
-      border-radius: 15px;
+    header {
       background: #131212;
-      overflow-y: auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      padding-bottom: 20px;
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
 
     .topbox {
-      height: auto;
-      background-color: #131212;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
     }
 
     .clogo, .alogo, .flogo {
-      height: 45px;
+      height: 50px;
       object-fit: contain;
     }
 
     h1 {
       font-family: monospace;
-      font-size: 1.5rem;
-      text-align: center;
+      font-size: 2rem;
+      margin: 0;
       color: rgb(170, 117, 255);
-      margin: 10px 0;
+    }
+
+    .products {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Responsive grid */
+    @media (max-width: 600px) {
+      .products { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 901px) and (max-width: 1400px) {
+      .products { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1401px) {
+      .products { grid-template-columns: repeat(4, 1fr); }
     }
 
     .product {
+      background: #212121;
+      border-radius: 15px;
+      padding: 15px;
+      color: white;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      background-color: #212121;
-      margin: 15px auto;
-      padding: 12px;
-      width: 90%;
-      border-radius: 20px;
-      gap: 15px;
-      color: #fff;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .i {
-      flex-shrink: 0;
       border-radius: 15px;
-      width: 120px;
+      width: 100%;
+      max-width: 200px;
       height: auto;
     }
 
     .h-letter {
-      flex: 1;
       font-weight: bold;
       color: #e4e4e4;
-      word-wrap: break-word;
       font-size: 0.9rem;
+      margin: 10px 0;
     }
 
     .btn {
@@ -86,7 +98,6 @@
       border: none;
       cursor: pointer;
       transition: 0.3s;
-      white-space: nowrap;
     }
 
     .btn:hover {
@@ -96,30 +107,13 @@
     .end {
       text-align: center;
       color: rgb(255, 0, 234);
-      font-size: 0.8rem;
-      margin: 15px;
-    }
-
-    /* Make buttons and layout adjust on very small screens */
-    @media (max-width: 400px) {
-      .product {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .i {
-        width: 100%;
-        max-width: 200px;
-      }
-      .btn {
-        margin-top: 10px;
-        width: 100%;
-        text-align: center;
-      }
+      font-size: 0.9rem;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="phone-frame">
+  <header>
     <h1>Top Products</h1>
     <h1>From</h1>
     <div class="topbox">
@@ -127,7 +121,9 @@
       <img src="amazon_logo-removebg-preview (1).png" class="alogo">
       <img src="flipkart logo.png" class="flogo">
     </div>
+  </header>
 
+  <section class="products">
     <div class="product">
       <img src="https://m.media-amazon.com/images/I/61rvkHxRmrL._SX425_.jpg" class="i">
       <span class="h-letter">gffdsfsdfdsfdfgfffg</span>
@@ -155,9 +151,9 @@
       <img src="https://m.media-amazon.com/images/I/61rvkHxRmrL._SX425_.jpg" class="i">
       <a href="https://amzn.in/d/0i6urBg"><button class="btn">Click Here</button></a>
     </div>
+  </section>
 
-    <p class="end">This site is made with my limitations... This is not a perfect site.  
-      For feedback and suggestion [@gmail.com] Thank you.</p>
-  </div>
+  <p class="end">This site is made with my limitations... This is not a perfect site.  
+  For feedback and suggestion [@gmail.com] Thank you.</p>
 </body>
 </html>
