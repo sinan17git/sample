@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  
 </head>
-
 <body>
-    <a href="www.openplant.shop"><div class="ba"><p class="back">Go Back</p></div></a>
-    <div class="main"><h1 class="h1">About us</h1>
+  <!-- Go Back link (fixed at top-left) -->
+  <a href="index.html" class="ba"><p class="back">Go Back</p></a>
+
+  <!-- Main content -->
+  <div class="main">
+    <h1 class="h1">About us</h1>
     <h3 class="h3">Huge thankyou for showing interest to know about this site and others</h3>
-    <h4 class="sinan">~Sinan</h4></div>
-    
+    <h4 class="sinan">~Sinan</h4>
+  </div>
 </body>
 </html>
 <style>
-    .main{
-        height: 400px;
-        width: 500px;
-        justify-content: center;
-    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url(enchanted-forest-lake-fantasy-background.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
-    .h1{
-        color: #1e52fff5;
-        justify-content: center;
-        display: flex;
-        
-        
+
+    /* Go Back fixed at top-left */
+    .ba {
+      position: fixed;  /* always stays in place */
+      top: 15px;
+      left: 15px;
+      z-index: 1000;
     }
-    .h3{
-        color: aliceblue;
-        font-style: italic;
+
+    .back {
+      color: rgb(250, 212, 0);
+      font-size: clamp(14px, 2vw, 20px); /* responsive */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
-    body{
-        background-image: url(enchanted-forest-lake-fantasy-background.jpg);
-        justify-content: center;
-        display: flex;
+
+    .back:hover {
+      color: orange;
     }
-    .sinan{
-        display: flex;
-        justify-content: flex-end;
-        color: aliceblue;
-        padding: 5px;
-        font-size: 20px;
-    
+
+    /* Main content centered */
+    .main {
+      max-width: 90%;
+      text-align: center;
+      margin-top: 80px; /* space under Go Back */
     }
-    .back{
-        color: rgb(250, 212, 0);
-        font-size: large;
-        margin-top: 12px;
-    
+
+    .h1 {
+      color: #1e52fff5;
     }
-    
-    
-</style>
+
+    .h3 {
+      color: aliceblue;
+      font-style: italic;
+    }
+
+    .sinan {
+      color: aliceblue;
+      font-size: clamp(16px, 2vw, 22px);
+      margin-top: 20px;
+      text-align: right;
+    }
+  </style>
